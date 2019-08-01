@@ -38,7 +38,7 @@ function App() {
       >
         //green block
         <Entity
-          geometry={{ primitive: "box", radius: gr / 8 }}
+          geometry={{ primitive: "sphere", radius: gr / 8 }}
           material={{ color: "green", opacity: 1 }}
           // position={{ x: cp, y: cp, z: -gr }}
           position={{ x: 0, y: 0, z: -gr }}
@@ -47,14 +47,14 @@ function App() {
             dur: 12000,
             repeat: "indefinite",
             to: "0 360 0",
-            easing: "linear",
+            // easing: "linear",
             loop: true
           }}
           rotation={{ x: 0, y: 0, z: 0 }}
         />
         //red block
         <Entity
-          geometry={{ primitive: "box", radius: gr / 8 }}
+          geometry={{ primitive: "sphere", radius: gr / 8 }}
           material={{ color: "red", opacity: 1 }}
           // position={{ x: cp, y: cp, z: -gr }}
           position={{ x: 0, y: 0, z: gr }}
@@ -63,7 +63,23 @@ function App() {
             dur: 12000,
             repeat: "indefinite",
             to: "360 360 360",
-            easing: "linear",
+            // easing: "linear",
+            loop: true
+          }}
+          rotation={{ x: 0, y: 0, z: 0 }}
+        />
+        //yellow block
+        <Entity
+          geometry={{ primitive: "sphere", radius: gr / 8 }}
+          material={{ color: "yellow", opacity: 1 }}
+          // position={{ x: cp, y: cp, z: -gr }}
+          position={{ x: 0, y: cp, z: cp }}
+          animation={{
+            property: "rotation",
+            dur: 12000,
+            repeat: "indefinite",
+            to: "360 0 0",
+            // easing: "linear",
             loop: true
           }}
           rotation={{ x: 0, y: 0, z: 0 }}

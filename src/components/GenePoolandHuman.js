@@ -17,8 +17,14 @@ class Human {
     if (this.spawningPool === null) {
       if (this.gender === "male") {
         this.spawningPool = new GenePool(mate, this);
+        if (mate !== null) {
+          mate.spawningPool = this.spawningPool;
+        }
       } else {
         this.spawningPool = new GenePool(this, mate);
+        if (mate !== null) {
+          mate.spawningPool = this.spawningPool;
+        }
       }
       return this.spawningPool.newSpawn(name, gender);
     } else {

@@ -2,7 +2,7 @@
   "name": "familytree",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://willy-mello.github.io/familyTree",
+  "homepage": "https://willy-mello.github.io/familytree",
   "dependencies": {
     "aframe": "^0.9.2",
     "aframe-particle-system-component": "^1.1.3",

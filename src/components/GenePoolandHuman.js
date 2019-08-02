@@ -62,4 +62,4 @@ class GenePool {
     return this.y;
   }
 }
-module.exports = { Human, GenePool };
+export { Human, GenePool };

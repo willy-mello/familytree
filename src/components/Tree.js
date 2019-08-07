@@ -48,7 +48,7 @@ function Tree() {
           property: "rotation",
           to: "360 0 0",
           loop: true,
-          dur: 10000,
+          dur: 20000,
           easing: "linear"
         }}
         rotation={{ x: 0, y: 0, z: 0 }}
@@ -133,7 +133,7 @@ function Tree() {
           //dad circle
           class="clickable"
           geometry={{ primitive: "sphere", radius: gr / 4 }}
-          material={{ color: "blue", opacity: 1 }}
+          material={{ opacity: 1, src: pool.y.imageUrl }}
           position={{ x: 0.1 + gr / 4, y: 0, z: 0 }}
           animation={{
             property: "rotation",
@@ -151,7 +151,7 @@ function Tree() {
         <Entity
           //mom cicle
           geometry={{ primitive: "sphere", radius: gr / 4 }}
-          material={{ color: "hotpink", opacity: 1 }}
+          material={{ opacity: 1, src: pool.x.imageUrl }}
           position={{ x: -(0.1 + gr / 4), y: 0, z: 0 }}
         />
       </Entity>
@@ -169,7 +169,8 @@ function Tree() {
           geometry={{ radiusInner: 0.005, radiusOuter: 0.007 }}
         />
       </Entity> */}
-      <Entity light={{ type: "point" }} />
+      <Entity light={{ type: "point" }} position={{ x: 0, y: 8, z: 2 }} />
+      <Entity light={{ type: "point" }} position={{ x: 0, y: -8, z: 2 }} />
       {/* <Entity gltf-model={{ src: "virtualcity.gltf" }} /> */}
       <Entity
         text={{ value: "children of " + pool.x.name + " and " + pool.y.name }}

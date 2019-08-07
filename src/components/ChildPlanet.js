@@ -26,13 +26,13 @@ function ChildPlanet(props) {
     <Entity
       class="clickable"
       geometry={{ primitive: "sphere", radius: gr / 8 }}
-      material={{ color: colors, opacity: 1 }}
+      material={{ opacity: 1, src: kid.imageUrl }}
       position={positions[idx]}
       animation={{
         property: "rotation",
         dur: 12000,
         repeat: "indefinite",
-        to: "0 360 0",
+        to: "360 0 0",
         // easing: "linear",
         loop: true
       }}

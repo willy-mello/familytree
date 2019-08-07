@@ -11,6 +11,8 @@ class Human {
     this.birthPool = birthPool;
     //will have to change spawning pool eventually to allow for
     this.spawningPool = null;
+    this.imageUrl =
+      "https://www.wallpaperup.com/uploads/wallpapers/2014/01/14/227249/e0ae6e6675d0eae1559c948141358316-700.jpg";
   }
   //may need static functions
   procreate(mate, name, gender) {
@@ -38,6 +40,19 @@ class Human {
     }
     console.log(chalk.blue("siblings"), this.birthPool.getSpawn());
     return this.birthPool.getSpawn();
+  }
+  addImage(str) {
+    this.imageUrl = str;
+  }
+  addParents(momName, dadName) {
+    if (this.birthPool === null) {
+      const dad = new Human(dadName, "male");
+      const mom = new Human(momName, "female");
+      const pool = new GenePool(mom, dad);
+      pool.spawn = [this];
+      this.birthPool = pool;
+      return { mom, dad };
+    }
   }
 }
 
